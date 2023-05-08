@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/coreos/etcd/clientv3"
+	"github.com/etcd-io/etcd/clientv3"
 	"github.com/gzjjyz/micro/discovery"
 	discoveryutil "github.com/gzjjyz/micro/discovery/util"
 	"github.com/gzjjyz/srvlib/utils"

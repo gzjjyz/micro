@@ -3,7 +3,7 @@ package test
 import (
 	"context"
 	"fmt"
-	"github.com/coreos/etcd/clientv3"
+	"github.com/etcd-io/etcd/clientv3"
 	"github.com/gzjjyz/micro/discovery"
 	"github.com/gzjjyz/micro/discovery/impl/etcd"
 	"github.com/gzjjyz/micro/discovery/impl/filecachedproxy"
