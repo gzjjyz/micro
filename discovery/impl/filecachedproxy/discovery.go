@@ -61,7 +61,7 @@ func (d *Discovery) LoadAll(_ context.Context) ([]*discovery.Service, error) {
 			return nil, err
 		}
 
-		if _, ok := d.watchedServices[srvName]; ok {
+		if _, ok := d.watchedServices[srvName]; !ok {
 			utils.ProtectGo(func() {
 				if err = d.watchOne(srvName); err != nil {
 					util.LogErr(err)
