@@ -14,6 +14,10 @@ var RoundRobinDialOpts = []grpc.DialOption{
 	grpc.WithDefaultServiceConfig(fmt.Sprintf(`{"loadBalancingConfig": [{"%s":{}}]}`, roundrobin.Name)),
 }
 
+var NotRoundRobinDialOpts = []grpc.DialOption{
+	grpc.WithInsecure(),
+}
+
 var customDoOnDiscoverSrvUpdated discovery.OnSrvUpdatedFunc = func(ctx context.Context, evt discovery.Evt, srv *discovery.Service) {}
 
 func InitGrpcResolver(ctx context.Context) error {
