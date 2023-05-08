@@ -3,8 +3,8 @@ package test
 import (
 	"context"
 	"fmt"
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/mvcc/mvccpb"
+	"github.com/etcd-io/etcd/clientv3"
+	"github.com/etcd-io/etcd/mvcc/mvccpb"
 	"strconv"
 	"testing"
 	"time"
