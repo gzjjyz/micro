@@ -2,11 +2,11 @@ package factory
 
 import (
 	"fmt"
-	"github.com/etcd-io/etcd/clientv3"
 	"github.com/gzjjyz/micro/discovery"
 	"github.com/gzjjyz/micro/discovery/impl/etcd"
 	"github.com/gzjjyz/micro/discovery/impl/filecachedproxy"
 	"github.com/gzjjyz/micro/env"
+	"go.etcd.io/etcd/client/v3"
 	"sync"
 	"time"
 )
