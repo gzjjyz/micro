@@ -3,10 +3,10 @@ package test
 import (
 	"context"
 	"fmt"
-	"github.com/etcd-io/etcd/clientv3"
 	"github.com/gzjjyz/micro/discovery"
 	"github.com/gzjjyz/micro/discovery/impl/etcd"
 	"github.com/gzjjyz/micro/discovery/impl/filecachedproxy"
+	"go.etcd.io/etcd/client/v3"
 	"testing"
 	"time"
 )

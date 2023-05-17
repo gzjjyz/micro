@@ -3,8 +3,7 @@ package test
 import (
 	"context"
 	"fmt"
-	"github.com/etcd-io/etcd/clientv3"
-	"github.com/etcd-io/etcd/mvcc/mvccpb"
+	"go.etcd.io/etcd/client/v3"
 	"strconv"
 	"testing"
 	"time"
@@ -80,7 +79,7 @@ func getKeyAndVal(event *clientv3.Event) (getKey, getValue string) {
 		getKey, getValue = string(event.PrevKv.Key), string(event.PrevKv.Value)
 	}
 
-	if event.Type == mvccpb.PUT {
+	if event.Type == clientv3.EventTypePut {
 		if event.Kv != nil {
 			getKey, getValue = string(event.Kv.Key), string(event.Kv.Value)
 		}
