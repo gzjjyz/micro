@@ -75,9 +75,7 @@ func (b *Builder) Build(target resolver.Target, cc resolver.ClientConn, opts res
 		resolvers = &doublelinked.LinkedList{}
 		b.srvNameToResolversMap[srvName] = resolvers
 	}
-	resolvers.Append(&doublelinked.LinkedNode{
-		Payload: resolve,
-	})
+	resolvers.Append(resolve)
 
 	return resolve, nil
 }
