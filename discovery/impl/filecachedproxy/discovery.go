@@ -199,7 +199,7 @@ func (d *Discovery) watchOne(srvName string) error {
 		if !watchSuccess {
 			err = watcher.Watch(filePath)
 			if err != nil {
-				util.LogErr(err)
+				//util.LogErr(err)
 				time.Sleep(5 * time.Second)
 				continue
 			}
