@@ -206,7 +206,9 @@ func (d *Discovery) watchOne(srvName string) error {
 
 			watchSuccess = true
 
+			d.mu.Lock()
 			d.unwatchSrvChMap[srvName] = unwatchCh
+			d.mu.Unlock()
 
 			oneSrvMu = d.MakeOrGetOpOneSrvMu(srvName)
 			oneSrvMu.Lock()

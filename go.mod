@@ -6,7 +6,6 @@ require (
 	github.com/995933447/confloader v0.0.0-20230314141707-e7b191386ae2
 	github.com/gzjjyz/srvlib v0.0.6
 	github.com/howeyc/fsnotify v0.9.0
-	go.etcd.io/etcd v3.3.27+incompatible
 	go.etcd.io/etcd/client/v3 v3.5.9
 	google.golang.org/grpc v1.41.0
 )
